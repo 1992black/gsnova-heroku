@@ -1,0 +1,26 @@
+{
+  "name": "gsnova",
+  "description": "deploy gsnova to Heroku.",
+  "keywords": ["gsnova"],
+  "env": {
+    "VER": {
+       "description": "设置 gsnova 版本",
+       "value": "0.33.0"
+    }, 
+    "KEY": {
+       "description": "设置 加密 key",
+       "value": "809240d3a021449f6e67aa73221d42df942a308a"
+    },
+    "Window": {
+       "description": "设置 MaxStreamWindow",
+       "value": "521k"
+    },
+    "Window_Refresh": {
+       "description": "设置 StreamMinRefresh",
+       "value": "32k"
+    }
+  },
+  "website": "https://github.com/1992black/gsnova-heroku",
+  "repository": "https://github.com/1992black/gsnova-heroku",
+  "stack": "container"
+ }

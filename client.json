@@ -1,0 +1,50 @@
+{
+    "Log": ["color"],
+    "UserAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36",
+    "Cipher":{"Method":"auto", "Key":"809240d3a021449f6e67aa73221d42df942a308a", "User": "gsnova"},
+    "Mux":{
+        "MaxStreamWindow": "512K",
+        "StreamMinRefresh":"32K"
+    },
+    "LocalDNS":{
+    	"Listen": "127.0.0.1:5300",
+    	"FastDNS":["223.5.5.5","180.76.76.76"],
+    	"TrustedDNS": ["114.114.114.114", "114.114.115.115"]
+    },
+    "Admin":{
+         "Listen": ":7788",
+         "BroadcastAddr":"224.0.0.1:48100",
+    	 "ConfigDir":"./android"
+    },
+    "Proxy":[
+    {
+         "Local": ":1080",
+         "Transparent": false,
+         "PAC":[
+             {"Protocol":["dns", "udp"],"Remote":"direct"},
+             {"Rule":["IsCNIP"],"Remote":"direct"},
+             {"Remote":"Default"}
+          ]
+     }
+     ],
+     "Channel":[
+     {
+	"Enable":true,
+	"Name":"Default",
+	"ServerList":["wss://########.herokuapp.com"],
+	"SNIProxy": "",
+	"Proxy":"",
+	"ConnsPerServer":3,
+	"RemoteDialMSTimeout":5000,
+	"RemoteDNSReadMSTimeout":1500,
+	"RemoteUDPReadMSTimeout":15000,
+	"LocalDialMSTimeout":5000,
+	"ReconnectPeriod": 1800,
+        "RCPRandomAdjustment" : 10,
+	"HeartBeatPeriod": 30,
+	"Compressor":"none",
+	"Hops":[],
+	"RemoteSNIProxy":{}
+     }
+     ]
+}
